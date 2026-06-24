@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join IEDC Team | PEEKAY CICS</title>
+    <meta name="description" content="Application form to join the IEDC team at PEEKAY CICS Arts & Science College.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="assets/logo.png">
+    <style>
+        .contact-form select {
+            width: 100%;
+            color: var(--ink);
+            background: rgba(7, 11, 29, 0.34);
+            border: 1px solid rgba(125, 211, 252, 0.24);
+            padding: 0.9rem 0.95rem;
+            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.64);
+            transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+            font-family: inherit;
+            outline: none;
+            cursor: pointer;
+            border-radius: var(--radius-sm, 4px);
+        }
+        .contact-form select:focus {
+            background: rgba(15, 23, 52, 0.62);
+            border-color: rgba(34, 211, 238, 0.62);
+            box-shadow: 0 0 0 4px rgba(34, 211, 238, 0.12), 0 0 28px rgba(34, 211, 238, 0.08);
+        }
+        .contact-form select option {
+            background: #0f1734;
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+    <canvas class="color-video-bg" id="color-video-bg" aria-hidden="true"></canvas>
+    <div class="page-bg"></div>
+    <div class="noise-layer"></div>
+
+    <header class="site-header" id="top">
+        <nav class="nav-shell">
+            <a href="index.html#home" class="brand">
+                <img src="assets/logo.png" alt="IEDC Cell Logo" class="brand-logo">
+                <span class="brand-copy">
+                    <strong>IEDC Cell</strong>
+                    <small>PEEKAY CICS Arts & Science College</small>
+                </span>
+            </a>
+
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+            </button>
+
+            <div class="nav-links" id="nav-links">
+                <a href="index.html#about">About</a>
+                <a href="index.html#works">Past Works</a>
+                <a href="index.html#team">Team</a>
+                <a href="index.html#faculty">Faculty</a>
+                <a href="index.html#contact">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="section-shell section-frame reveal" style="padding-top: 150px; min-height: 100vh; display: flex; align-items: center; justify-content: center;">
+            <div style="width: 100%; max-width: 700px;">
+                <div class="section-title">
+                    <span class="kicker">Join Our Team</span>
+                    <h2>Application Form</h2>
+                    <p style="margin-top: 1rem; color: var(--text-muted);">Fill out the details below to express your interest in joining the IEDC Peekay team. We will reach out to you shortly.</p>
+                </div>
+
+                <!-- FormSubmit.co is used to send emails without backend code. -->
+                <form class="contact-form" action="https://formsubmit.co/peekayiedc@gmail.com" method="POST">
+                    
+                    <!-- Hidden configuration fields -->
+                    <input type="hidden" name="_subject" value="New Application: Interested to join IEDC team!">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_template" value="table">
+                    <!-- Set a next page if you want to redirect after success, otherwise it goes to formsubmit's default thank you page -->
+                    <input type="hidden" name="_next" value="https://peekayiedc.vercel.app/"> 
+                    
+                    <label>
+                        <span>Name</span>
+                        <input type="text" name="Name" placeholder="Enter your full name" required>
+                    </label>
+                    
+                    <label>
+                        <span>Class</span>
+                        <input type="text" name="Class" placeholder="E.g., BBA, BSc Computer Science" required>
+                    </label>
+                    
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                        <label>
+                            <span>Semester</span>
+                            <select name="Semester" required>
+                                <option value="" disabled selected>Select Semester</option>
+                                <option value="1">Semester 1</option>
+                                <option value="2">Semester 2</option>
+                                <option value="3">Semester 3</option>
+                                <option value="4">Semester 4</option>
+                                <option value="5">Semester 5</option>
+                                <option value="6">Semester 6</option>
+                                <option value="7">Semester 7</option>
+                                <option value="8">Semester 8</option>
+                            </select>
+                        </label>
+                        
+                        <label>
+                            <span>Batch</span>
+                            <select name="Batch" required>
+                                <option value="" disabled selected>Select Batch</option>
+                                <option value="2024-28">2024-2028</option>
+                                <option value="2025-29">2025-2029</option>
+                                <option value="2026-30">2026-2030</option>
+                                <option value="2027-31">2027-2031</option>
+                            </select>
+                        </label>
+                    </div>
+
+                    <div style="display: grid; grid-template-columns: 1fr 2fr; gap: 1rem;">
+                        <label>
+                            <span>Age</span>
+                            <input type="number" name="Age" placeholder="Your age" required min="16" max="30">
+                        </label>
+                        
+                        <label>
+                            <span>Phone Number</span>
+                            <input type="tel" name="Phone" placeholder="Enter your phone number" required>
+                        </label>
+                    </div>
+                    
+                    <label>
+                        <span>Address</span>
+                        <textarea name="Address" placeholder="Enter your full address" required style="min-height: 100px;"></textarea>
+                    </label>
+
+                    <label>
+                        <span>Pincode</span>
+                        <input type="text" name="Pincode" placeholder="Enter your pincode" required pattern="[0-9]{6}" title="Please enter a valid 6-digit pincode">
+                    </label>
+
+                    <button class="btn btn-solid" type="submit" style="margin-top: 1.5rem; width: 100%;">Submit Application</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div>
+            <strong>IEDC Cell</strong>
+            <p>PEEKAY CICS Arts & Science College, Kozhikode</p>
+        </div>
+        <a href="#top" class="footer-link">Back to top</a>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
